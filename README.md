@@ -6,8 +6,6 @@ aws-cli development environment to Remote Container
 - aws-cli
 - sam-cli
 - cloudSDK
-<!-- - cloudFormation
- - linter Complete -->
 - Terraform
 - Terraformer
 - golang
@@ -23,6 +21,13 @@ aws-cli development environment to Remote Container
   - [VSCode Remote Containers を利用して最強のローカル開発環境を作りたい - Qiita](https://qiita.com/sabure500/items/a117b8a1733193be455f#visual-studio-code)
 - AWS CLI & SAM CLI
   - [aws-cli](./Docment/aws-cli.md)
+- Create `.env` file
+
+```bash
+AWS_ACCESS_KEY_ID=XXXXXXXXXXXXXXXXXXX
+AWS_SECRET_ACCESS_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+AWS_DEFAULT_REGION=ap-xxxxxxxxxxxx
+```
 
 ## Note
 

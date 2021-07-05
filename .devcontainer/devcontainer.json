@@ -1,7 +1,11 @@
 {
 	"name": "Iac env",
-	"context": "..",
-	"dockerFile": "../Dockerfile",
+	"dockerComposeFile": [
+		"../docker-compose.yml",
+		"docker-compose.yml"
+	],
+	"service": "iac",
+	"workspaceFolder": "/workspace",
 	"settings": { 
 		"terminal.integrated.shell.linux": null,
 		"editor.tabSize": 2,
@@ -14,6 +18,7 @@
 		"eamodio.gitlens",
 		"mhutchie.git-graph",
 		// "kddejong.vscode-cfn-lint",
+		"pkief.material-icon-theme",
 		"aws-scripting-guy.cform",
 		"ms-azuretools.vscode-docker",
 		"4ops.terraform"
