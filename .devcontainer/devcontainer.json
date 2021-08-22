@@ -6,21 +6,26 @@
 	],
 	"service": "iac",
 	"workspaceFolder": "/workspace",
-	"settings": { 
+	"settings": {
 		"terminal.integrated.shell.linux": null,
 		"editor.tabSize": 2,
-    "editor.autoIndent": "full",
+		"editor.formatOnSave": true,
+		"editor.autoIndent": "full",
 		"yaml.format.enable": true,
+		"terraform.languageServer": {
+			"args": [
+				"serve",
+			],
+		},
 	},
 	"extensions": [
 		"MS-CEINTL.vscode-language-pack-ja",
 		"donjayamanne.githistory",
 		"eamodio.gitlens",
 		"mhutchie.git-graph",
-		// "kddejong.vscode-cfn-lint",
 		"pkief.material-icon-theme",
 		"aws-scripting-guy.cform",
 		"ms-azuretools.vscode-docker",
-		"4ops.terraform"
+		"hashicorp.terraform"
 	]
 }

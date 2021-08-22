@@ -1,4 +1,4 @@
-version: "3.8"
+version: "3.9"
 
 services:
   iac:
@@ -9,4 +9,6 @@ services:
     tty: true
     stdin_open: true
     ports:
-      - 8080:8080
+      - 8090:8090
+    volumes: 
+      - /var/run/docker.sock:/var/run/docker.sock
