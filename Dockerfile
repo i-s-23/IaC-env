@@ -41,3 +41,9 @@ RUN apt-get update && apt-get install -y \
 && curl -LO https://github.com/GoogleCloudPlatform/terraformer/releases/download/$(curl -s https://api.github.com/repos/GoogleCloudPlatform/terraformer/releases/latest | grep tag_name | cut -d '"' -f 4)/terraformer-${PROVIDER}-linux-amd64 \
 && chmod +x terraformer-${PROVIDER}-linux-amd64 \
 && mv terraformer-${PROVIDER}-linux-amd64 /usr/local/bin/terraformer
+
+# create user.
+ARG USER_UID
+RUN groupadd -g ${USER_UID} vscode \
+  && useradd -m -u ${USER_UID} -g ${USER_UID} vscode \
+  && echo "vscode ALL=(ALL) NOPASSWD: ALL" >/etc/sudoers.d/vscode

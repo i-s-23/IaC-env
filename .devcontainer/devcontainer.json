@@ -22,5 +22,6 @@
 		"aws-scripting-guy.cform",
 		"ms-azuretools.vscode-docker",
 		"4ops.terraform"
-	]
+	],
+  "remoteUser": "vscode"
 }
