@@ -26,12 +26,15 @@ RUN apt-get update && apt-get install -y \
   && rm -rf /var/lib/apt/lists/* \
   # CloudSDK install
   && echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] http://packages.cloud.google.com/apt cloud-sdk main" | tee -a /etc/apt/sources.list.d/google-cloud-sdk.list && curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | apt-key --keyring /usr/share/keyrings/cloud.google.gpg  add - && apt-get update -y && apt-get install google-cloud-sdk -y \
-  # # aws-cli instlal
+  # aws-cli instlal
   && curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" \
   && unzip awscliv2.zip \
   && rm -f awscliv2.zip \
   && aws/install \
   && rm -fr aws \
+  # aws-cli auto-complete
+  && echo 'complete -C aws_completer aws' >> $HOME/.bashrc \
+  && source ~/.bashrc \
   # Terraform install
   && apt-get install software-properties-common \
   && curl -fsSL https://apt.releases.hashicorp.com/gpg | apt-key add - \
