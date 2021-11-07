@@ -7,7 +7,8 @@
 	"service": "iac",
 	"workspaceFolder": "/workspace",
 	"settings": { 
-		"terminal.integrated.shell.linux": null,
+		"terminal.integrated.defaultProfile.windows": "bash",
+		"terminal.integrated.defaultProfile.linux": "bash",
 		"editor.tabSize": 2,
     "editor.autoIndent": "full",
 		"yaml.format.enable": true,
