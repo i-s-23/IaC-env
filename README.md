@@ -4,11 +4,11 @@ aws-cli development environment to Remote Container
 ## Features
 
 - aws-cli
-- sam-cli
+- serverless framework
 - cloudSDK
 - Terraform
-- Terraformer
-- golang
+- former2-cli
+- amplify-cli
 
 ## Requirement
 

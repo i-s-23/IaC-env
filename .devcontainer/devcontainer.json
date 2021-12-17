@@ -2,7 +2,6 @@
 	"name": "Iac env",
 	"dockerComposeFile": [
 		"../docker-compose.yml",
-		"docker-compose.yml"
 	],
 	"service": "iac",
 	"workspaceFolder": "/workspace",
@@ -27,5 +26,10 @@
 		"aws-scripting-guy.cform",
 		"ms-azuretools.vscode-docker",
 		"hashicorp.terraform"
-	]
+	],
+	"features": {
+		"git": "latest",
+		"github-cli": "latest",
+		"terraform": "latest"
+	}
 }
