@@ -1,26 +1,42 @@
 {
 	"name": "Iac env",
-	"dockerComposeFile": [
-		"../docker-compose.yml",
-		"docker-compose.yml"
+	"image": "mcr.microsoft.com/devcontainers/javascript-node",
+	"postCreateCommand": "npm install -g former2",
+	"runArgs": [
+		"--env-file",
+		".env"
 	],
-	"service": "iac",
-	"workspaceFolder": "/workspace",
-	"settings": { 
-		"terminal.integrated.shell.linux": null,
-		"editor.tabSize": 2,
-    "editor.autoIndent": "full",
-		"yaml.format.enable": true,
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "bash",
+				"editor.tabSize": 2,
+				"editor.formatOnSave": true,
+				"editor.autoIndent": "full",
+				"yaml.format.enable": true,
+				"terraform.languageServer": {
+					"args": [
+						"serve"
+					]
+				}
+			},
+			"extensions": [
+				"MS-CEINTL.vscode-language-pack-ja",
+				"donjayamanne.githistory",
+				"eamodio.gitlens",
+				"mhutchie.git-graph",
+				"pkief.material-icon-theme",
+				"aws-scripting-guy.cform",
+				"ms-azuretools.vscode-docker",
+				"hashicorp.terraform"
+			]
+		}
 	},
-	"extensions": [
-		"MS-CEINTL.vscode-language-pack-ja",
-		"donjayamanne.githistory",
-		"eamodio.gitlens",
-		"mhutchie.git-graph",
-		// "kddejong.vscode-cfn-lint",
-		"pkief.material-icon-theme",
-		"aws-scripting-guy.cform",
-		"ms-azuretools.vscode-docker",
-		"4ops.terraform"
-	]
+	"features": {
+		"ghcr.io/devcontainers/features/github-cli": {},
+		"ghcr.io/devcontainers/features/terraform": {},
+		"ghcr.io/devcontainers/features/aws-cli": {},
+		"ghcr.io/customink/codespaces-features/sam-cli": {},
+		"ghcr.io/dhoeric/features/google-cloud-cli": {}
+	}
 }
